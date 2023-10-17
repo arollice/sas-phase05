@@ -47,8 +47,8 @@ include(SHARED_PATH . '/salamander-header.php');
           <td><?php echo h($salamander['salamanderName']); ?></td>
           
           <!-- Use urlFor with show.php AND h(u) with the salamander['id'] -->
-          
-          <td><a href="<?php urlFor('/salamanders/show.php?id=' . h(u($salamander['id']))); ?>">View</a></td>
+
+          <td><a href="<?php echo urlFor('salamanders/show.php?id=' . h(u($salamander['id']))); ?>">View</a></td>
 
           <td><a href="#">Edit</a></td>
           <td><a href="#">Delete</a></td>
