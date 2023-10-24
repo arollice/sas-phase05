@@ -20,5 +20,5 @@
   define("WWW_ROOT", $doc_root);
 
   require_once('functions.php');
-
+ 
 ?>
