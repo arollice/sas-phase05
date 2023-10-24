@@ -1,8 +1,8 @@
 <?php require_once('../../private/initialize.php'); ?>
 
-<?php require_once('../../private/initialize.php');
+<?
 
-$pageTitle = 'Salamander Details';
+$pageTitle = 'Create a Salamander';
 
 include(SHARED_PATH . '/salamander-header.php')
 ?>
