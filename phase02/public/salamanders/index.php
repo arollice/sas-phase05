@@ -14,7 +14,7 @@ include(SHARED_PATH . '/salamander-header.php');
 
 <h1>Salamanders Main Page</h1>
 
-  <a href="<?= url_for('/salamanders/create.php'); ?>">Create a Salamander</a>
+  <a href="<?= url_for('/salamanders/new.php'); ?>">Create a Salamander</a>
 
 <table>
   <tr>
