@@ -5,6 +5,6 @@ if(is_post_request()) {
   echo "Salamander Name: " . $salamanderName;
 
 } else {
-  redirect_to(url_for('salamanders/new.php'));
+  redirect_to(url_for('/salamanders/new.php'));
 }
 ?>
