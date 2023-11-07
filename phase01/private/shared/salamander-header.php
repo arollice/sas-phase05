@@ -20,6 +20,5 @@
     <navigation>
       <ul>
       <li><a href="<?= urlFor('salamanders/'); ?>">Salamanders</a></li>
-      </ul>
     </navigation>
 

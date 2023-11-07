@@ -18,5 +18,5 @@ INSERT INTO `salamander` (`id`, `name`, `habitat`, `description` ) VALUES
 
 
 -- Create a user named sally and grant that user all privileges
-GRANT ALL PRIVILEGES ON salamanders.* TO 'sally'@'localhost' IDENTIFIED BY 'P@ssword1234';;
+GRANT ALL PRIVILEGES ON salamanders.* TO 'sally'@'localhost' IDENTIFIED BY 'P@ssWord4321';;
 FLUSH PRIVILEGES;
