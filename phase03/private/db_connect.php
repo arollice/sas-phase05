@@ -3,7 +3,7 @@
 $dbhost = 'localhost';
 $dbuser = 'sally';
 $dbpass = 'P@ssWord4321';
-$dbname = 'arollice_salamanders';
+$dbname = 'salamanders';
 
 //create connection
 $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
@@ -13,8 +13,8 @@ $query = "SELECT * FROM salamander";
 $result_set = mysqli_query($connection, $query);
 
 //use returned data (if any)
-while($salamander_set = mysqli_fetch_assoc($result_set)){
-  echo $salamander_set['name'] . "<br />";
+while($result = mysqli_fetch_assoc($result_set)){
+  echo $result['name'] . "<br />";
 }
 
 //release returned data

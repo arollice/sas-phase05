@@ -11,13 +11,13 @@ if (is_post_request()) {
 $pageTitle = "Create";
 include (SHARED_PATH . '/salamander-header.php');
 ?>
-<a href= "<?= url_for('/salamander/index.php'); ?>">&laquo; Back to List</a>
-<h1>Create Salamander</h1>
+<a href="<?= url_for('/salamanders/index.php'); ?>">&laquo; Back to Salamander List</a>
+<h1>Stub for Create Salamander</h1>
 <!-- add label -->
-<form action="<?= url_for('/salamanders/create.php'); ?>" method="post">
+<!-- <form action="<?= url_for('/salamanders/create.php'); ?>" method="post">
     <label for="salamanderName">Name</label><br>
     <input type="text" name="salamanderName"/><br>
     <input type="submit" value="Create Salamander"/>
-</form>
+</form> -->
 
 <?php include (SHARED_PATH . '/salamander-footer.php'); ?>
