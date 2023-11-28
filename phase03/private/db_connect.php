@@ -1,9 +1,9 @@
 <?php
 
 $dbhost = 'localhost';
-$dbuser = 'sally';
+$dbuser = 'arollice_sally';
 $dbpass = 'P@ssWord4321';
-$dbname = 'salamanders';
+$dbname = 'arollice_salamanders';//need to change DB Name and User name when using Mamp PHPMyAdmin
 
 //create connection
 $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
