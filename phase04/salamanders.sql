@@ -2,7 +2,8 @@
 DROP TABLE IF EXISTS salamander;
 CREATE TABLE `salamander` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL AUTO_INCREMENT,
+PRIMARY KEY (`id`),
   `habitat` text,
   `description` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
