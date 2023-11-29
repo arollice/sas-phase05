@@ -6,29 +6,13 @@ if(!isset($_GET['id'])) {
     redirect_to(url_for('salamanders/index.php'));
   }
     $id = $_GET['id'];
-   
-    
-    $salamander = find_salamander_by_id($id);
     
     if(is_post_request()) {
-      $sql = "DELETE FROM salamander ";
-      $sql .= "WHERE id='".$id."' ";
-      $sql .= "LIMIT 1";
 
-      $result = mysqli_query($db, $sql);
-
-       //For DELETE statements, $result is true/false
-    if($result){
-
+      $result = delete_salamander($id);
       redirect_to(url_for('salamanders/index.php'));
-    } else {
-
-      //Delete failed 
-      echo mysqli_error($db);
-      db_disconnect($db);  
-      exit;
-    }
-     
+   } else {
+    $salamander = find_salamander_by_id($id);
    }
   
   $pageTitle = 'Delete Salamander'; 

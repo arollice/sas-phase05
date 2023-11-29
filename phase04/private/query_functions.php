@@ -63,3 +63,26 @@ function update_salamander($salamander){
       db_disconnect($db);
     }
 }
+
+function delete_salamander() {
+    global $db;
+    global $id;
+    $sql = "DELETE FROM salamander ";
+    $sql .= "WHERE id='".$id."' ";
+    $sql .= "LIMIT 1";
+
+    $result = mysqli_query($db, $sql);
+
+     //For DELETE statements, $result is true/false
+  if($result){
+
+    return true;
+    
+  } else {
+
+    //Delete failed 
+    echo mysqli_error($db);
+    db_disconnect($db);  
+    exit;
+  }
+}
