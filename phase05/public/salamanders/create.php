@@ -9,9 +9,23 @@ if(is_post_request()) {
     $salamander['habitat'] = $_POST['habitat'] ?? '';
     $salamander['description'] = $_POST['description'];
 
-    insert_salamander($salamander);
-    $newID = mysqli_insert_id($db);
-    redirect_to(url_for('salamanders/show.php?id=' . $newID  ));
-}
+    $result = insert_salamander($salamander);
+
+    if($result === true){
+        $newID = mysqli_insert_id($db);
+        redirect_to(url_for('salamanders/show.php?id=' . $newID  ));
+
+    
+    } else {
+      $errors = $result;
+    }
+       
+     
+  } else {
+    redirect_to(url_for('salamanders/new.php?id='));
+  }
+  
+
 include(SHARED_PATH . '/salamander-footer.php'); 
 ?>
+
